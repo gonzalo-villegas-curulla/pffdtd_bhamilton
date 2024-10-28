@@ -26,7 +26,7 @@ import hashlib
 import multiprocessing as mp
 import scipy.io.wavfile
 
-EPS = np.finfo(np.float).eps
+EPS = np.finfo(float).eps # GVC modif 2024/10/28 at 12h14. Original was: "EPS = np.finfo(np.float).eps"
 
 def rotmatrix_ax_ang(Rax:Any, Rang:float):
     assert isinstance(Rax,np.ndarray)
